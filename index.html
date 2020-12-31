@@ -120,6 +120,14 @@
   <script src="AgoraRTCSDK-3.3.1.js"></script>
   <script>
     console.log("agora sdk version: " + AgoraRTC.VERSION + " compatible: " + AgoraRTC.checkSystemRequirements());
+    
+    stream.setVideoEncoderConfiguration({
+      frameRate: {
+        min: 5,
+        max: 5
+      },
+    });
+    
     var resolutions = [
       {
         name: "default",
